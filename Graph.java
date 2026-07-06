@@ -66,14 +66,3 @@ class Graph {
         sc.close();
     }
 }
-
-
-// Enter number of vertices: 5
-// Enter number of edges: 4
-// Enter the edges (u v):
-// 0 1 
-// 0 2
-// 1 3
-// 1 4
-// DFS Traversal:
-// 0 1 3 4 2 
