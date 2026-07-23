@@ -1,5 +1,19 @@
 # DSA Practice
 
+A collection of Java practice solutions for data structures and algorithms problems.
+
+## Repository Overview
+This repository contains Java programs solving common competitive programming and DSA problems. It includes graph algorithms, string transformation, query processing, pattern generation, and more.
+
+## Included Files
+- `Graph.java` — DFS traversal on an undirected graph.
+- `CP_Flip_Bits.java` — Solve the "Flip the Bits" transformation problem.
+- `CP_Vanya_Lanterns.java` — Solve the "Vanya and Lanterns" minimum radius problem.
+- `Grid_Shape.java` — Grid shape or geometry-based solution.
+- `Number_Pattern.java` — Number pattern generation or analysis.
+- `People_Capacity.java` — People capacity or constraint-based solution.
+- `Sum_of_Queries.java` — Query sum processing logic.
+
 ## Solution 1: Graph.java
 
 This file contains a Java program that performs a Depth-First Search (DFS) traversal on a graph. The program takes the number of vertices, number of edges, and the edges from the user, builds the graph, and prints the DFS traversal order.
@@ -79,7 +93,16 @@ DFS Traversal:
 - Space complexity: O(V)
 
 ## How to Run
+Compile and run the desired Java file. For example:
+
 ```bash
 javac Graph.java
 java Graph
+```
+
+For other files, replace `Graph.java` with the desired filename:
+
+```bash
+javac CP_Flip_Bits.java
+java CP_Flip_Bits
 ```
