@@ -13,6 +13,7 @@ This repository contains Java programs solving common competitive programming an
 - `Number_Pattern.java` — Number pattern generation or analysis.
 - `People_Capacity.java` — People capacity or constraint-based solution.
 - `Sum_of_Queries.java` — Query sum processing logic.
+- `maximum_weight_possible_frequency_balanced_windows.java` — Find the maximum total weight of subarrays where some value occurs more than half the time.
 
 ## Solution 1: Graph.java
 
@@ -129,3 +130,24 @@ A group of `n` friends wants to visit a restaurant across several days. Each fri
 
 - For each test case, print the maximum number of days the friends can visit the restaurant.
 - Print `0` if no valid group of at least two friends can be formed.
+
+## Solution: Maximum Weight Possible Frequency Balanced Windows
+
+- File: `maximum_weight_possible_frequency_balanced_windows.java`
+- Problem: find the maximum total weight of any subarray where some value appears more than half the time.
+- Approach: brute-force all subarrays, track frequency of values and the maximum frequency, and update the maximum sum when the subarray has a majority value.
+
+### Problem Description
+
+Given an array `A` and a weight array `W`, compute the maximum sum of weights over all subarrays in which some element of `A` appears strictly more than half of the subarray's length.
+
+### Input Format
+
+- `n`: number of elements in the arrays
+- `c`: unused second input value
+- line of `n` integers for `A`
+- line of `n` integers for `W`
+
+### Output
+
+- Print the maximum total weight among all valid subarrays.
