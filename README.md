@@ -14,6 +14,7 @@ This repository contains Java programs solving common competitive programming an
 - `People_Capacity.java` — People capacity or constraint-based solution.
 - `Sum_of_Queries.java` — Query sum processing logic.
 - `maximum_weight_possible_frequency_balanced_windows.java` — Find the maximum total weight of subarrays where some value occurs more than half the time.
+- `maximum_possible_sum_mode_frequencies_all_K_groups.java` — Compute the maximum total mode frequencies sum when splitting into K groups.
 
 ## Solution 1: Graph.java
 
@@ -151,3 +152,23 @@ Given an array `A` and a weight array `W`, compute the maximum sum of weights ov
 ### Output
 
 - Print the maximum total weight among all valid subarrays.
+
+## Solution: Maximum Possible Sum Mode Frequencies All K Groups
+
+- File: `maximum_possible_sum_mode_frequencies_all_K_groups.java`
+- Problem: compute the maximum total mode frequency sum by partitioning an array into exactly `k` groups.
+- Approach: recursively partition the array into `k` subarrays, compute the mode frequency for each subarray, and track the maximum total score.
+
+### Problem Description
+
+Given an array of integers and an integer `k`, divide the array into exactly `k` non-empty contiguous groups. For each group, compute the frequency of the most common value. Output the maximum sum of these maximum frequencies over all valid partitions.
+
+### Input Format
+
+- `n`: number of elements in the array
+- `k`: number of groups
+- next `n` lines: the array values
+
+### Output
+
+- Print the maximum total sum of mode frequencies across the `k` groups.
