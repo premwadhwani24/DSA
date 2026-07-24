@@ -185,40 +185,108 @@ Explanation:
 ## Solution: Maximum Weight Possible Frequency Balanced Windows
 
 - File: `maximum_weight_possible_frequency_balanced_windows.java`
-- Problem: find the maximum total weight of any subarray where some value appears more than half the time.
-- Approach: brute-force all subarrays, track frequency of values and the maximum frequency, and update the maximum sum when the subarray has a majority value.
+- Problem: find the maximum total weight of a frequency-balanced window in a stream of packets.
+- Approach: enumerate all windows, maintain category frequencies and weight sums, and record the maximum weight when a category strictly dominates the window.
 
 ### Problem Description
 
-Given an array `A` and a weight array `W`, compute the maximum sum of weights over all subarrays in which some element of `A` appears strictly more than half of the subarray's length.
+In satellite signal processing, a stream of `N` data packets is received. Each packet has:
+- a category `A[i]` in the range `[0, C-1]`
+- a weight `W[i]`
+
+A window `[L, R]` is a contiguous subarray of packets. A window is frequency-balanced if some category appears more than half the time in that window.
+
+Your task is to compute the maximum total window weight among all frequency-balanced windows.
 
 ### Input Format
 
-- `n`: number of elements in the arrays
-- `c`: unused second input value
-- line of `n` integers for `A`
-- line of `n` integers for `W`
+- The first line contains an integer `N`.
+- The second line contains an integer `C`.
+- The next `N` lines each contain an integer representing `A[i]`.
+- The next `N` lines each contain an integer representing `W[i]`.
 
 ### Output
 
-- Print the maximum total weight among all valid subarrays.
+- Print a single integer representing the maximum total weight of any frequency-balanced window.
+
+### Constraints
+
+- `1 ≤ N ≤ 10^5`
+- `1 ≤ C ≤ 10^5`
+- `0 ≤ A[i] < C`
+- `1 ≤ W[i] ≤ 10^9`
+
+### Example
+
+Input:
+```
+7
+3
+1
+1
+2
+1
+0
+1
+1
+4
+2
+3
+5
+1
+6
+2
+```
+
+Output:
+```
+23
+```
 
 ## Solution: Maximum Possible Sum Mode Frequencies All K Groups
 
 - File: `maximum_possible_sum_mode_frequencies_all_K_groups.java`
-- Problem: compute the maximum total mode frequency sum by partitioning an array into exactly `k` groups.
-- Approach: recursively partition the array into `k` subarrays, compute the mode frequency for each subarray, and track the maximum total score.
+- Problem: partition an array into exactly `K` non-empty contiguous groups to maximize the sum of mode frequencies of each group.
+- Approach: recursively generate valid partitions, compute the most frequent element count for each segment, and maximize the total score.
 
 ### Problem Description
 
-Given an array of integers and an integer `k`, divide the array into exactly `k` non-empty contiguous groups. For each group, compute the frequency of the most common value. Output the maximum sum of these maximum frequencies over all valid partitions.
+You are given an array `a` of size `N` and an integer `K`. Divide the array into exactly `K` non-empty contiguous groups. The score of a group is the frequency of the most frequent element in that group.
+
+Your task is to maximize the sum of the scores of all `K` groups.
 
 ### Input Format
 
-- `n`: number of elements in the array
-- `k`: number of groups
-- next `n` lines: the array values
+- The first line contains an integer `N`.
+- The second line contains an integer `K`.
+- The next `N` lines each contain one integer `a[i]`.
 
 ### Output
 
-- Print the maximum total sum of mode frequencies across the `k` groups.
+- Print a single integer representing the maximum total score.
+
+### Constraints
+
+- `1 ≤ N ≤ 500`
+- `1 ≤ K ≤ N`
+- `1 ≤ a[i] ≤ 10^5`
+
+### Example
+
+Input:
+```
+7
+2
+1
+2
+2
+3
+1
+1
+1
+```
+
+Output:
+```
+5
+```
