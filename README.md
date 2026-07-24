@@ -14,6 +14,7 @@ This repository contains Java programs solving common competitive programming an
 - `People_Capacity.java` — People capacity or constraint-based solution.
 - `Sum_of_Queries.java` — Query sum processing logic.
 - `Min_total_travel_cost.java` — Assign 2N employees to two cities to minimize total travel cost using a special City B cost formula.
+- `Discount.java` — Choose the best coupon to minimize total chocolate purchase cost by getting the cheapest bar free among selected bars.
 - `maximum_weight_possible_frequency_balanced_windows.java` — Find the maximum total weight of subarrays where some value occurs more than half the time.
 - `maximum_possible_sum_mode_frequencies_all_K_groups.java` — Compute the maximum total mode frequencies sum when splitting into K groups.
 
@@ -168,6 +169,53 @@ Output:
 Explanation:
 - City B cost for each employee is `min(A[i], B[i]) + B[i]`.
 - Assign employees 3 and 4 to City A, and employees 1 and 2 to City B for minimum total cost.
+
+## Solution: Discounts
+
+- File: `Discount.java`
+- Problem: select one coupon to minimize total spending on `n` chocolate bars, where each coupon lets you choose `q_i` bars and pay only for the `q_i-1` most expensive of them.
+- Approach: sort the bar prices, precompute prefix sums, and for each coupon compute `total - price[n - q_i]` to remove the cheapest bar among the chosen `q_i` most expensive bars.
+
+### Problem Description
+
+You want to buy all `n` chocolate bars. You have `m` coupons, and coupon `i` lets you buy `q_i` bars while paying only for the `q_i-1` most expensive ones among them.
+
+For each coupon, determine the minimum amount of money you must pay if you use that coupon optimally and purchase the remaining bars at full price.
+
+### Input Format
+
+- The first line contains integer `n`.
+- The second line contains `n` integers `a_1, a_2, ..., a_n`.
+- The third line contains integer `m`.
+- The fourth line contains `m` integers `q_1, q_2, ..., q_m`.
+
+### Output
+
+- Print `m` integers, where the `i`-th output is the minimum amount to pay when using coupon `i`.
+
+### Constraints
+
+- `2 ≤ n ≤ 3⋅10^5`
+- `1 ≤ a_i ≤ 10^9`
+- `1 ≤ m ≤ n-1`
+- `2 ≤ q_i ≤ n`
+- all `q_i` are pairwise distinct
+
+### Example
+
+Input:
+```
+7
+7 1 3 1 4 10 8
+2
+3 4
+```
+
+Output:
+```
+27
+30
+```
 
 ### Input Format
 
