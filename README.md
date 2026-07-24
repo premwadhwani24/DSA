@@ -1,84 +1,129 @@
-﻿# Infosys Hack With Infy Sample Problems
+﻿# DSA Practice Repository
 
-This repository contains Java solutions and analysis for the Infosys "Hack With Infy" sample questions.
+This repository contains Java solutions for competitive programming and data structures & algorithms problems.
+It includes classic contest problems, Infosys sample challenges, graph traversal, string transformation, query processing, pattern generation, and more.
 
-## Current Implementations
+## Unified Contents
 
-- `Gym_Energy.java` — Sample 1: minimum exercises to reach zero energy, with each exercise usable at most twice.
-- `Heroes_Villains.java` — Sample 2: minimum prefix of villains to remove so heroes with fixed health can win.
-- `Road_Construction.java` — Sample 3: minimum days to make terrain strictly downward-sloping with day-based digging power.
-- `Mountain_Array.java` — Sample 4: minimum number of element changes to make the array a mountain shape.
+### General Java Solutions
+- `Graph.java` — DFS traversal on an undirected graph.
+- `CP_Flip_Bits.java` — Flip the Bits transformation problem.
+- `CP_Vanya_Lanterns.java` — Vanya and Lanterns minimum radius problem.
+- `Grid_Shape.java` — Grid shape / geometry-based problem.
+- `Number_Pattern.java` — Numeric pattern generation.
+- `People_Capacity.java` — Capacity or constraint-based selection problem.
+- `Sum_of_Queries.java` — Query sum processing problem.
+- `Min_total_travel_cost.java` — Assign 2N employees to two cities and minimize travel cost.
+- `Discount.java` — Coupon discount problem placeholder.
+- `maximum_weight_possible_frequency_balanced_windows.java` — Maximum total weight for a frequency-dominant subarray.
+- `maximum_possible_sum_mode_frequencies_all_K_groups.java` — Maximum total mode frequency sum across K groups.
+- `Friends_Restaurant.java` — Maximize restaurant orders under type and doubling constraints.
+- `one_remove_max_return.java` — Remove one occurrence of a digit to maximize the remaining number.
 
-## Sample Questions Analyzed
+### Infosys Hack With Infy Sample Problems
+- `Gym_Energy.java` — Sample 1: gym energy exhaustion using each exercise at most twice.
+- `Heroes_Villains.java` — Sample 2: minimum prefix of villains to remove for hero victory.
+- `Road_Construction.java` — Sample 3: minimum days to make terrain strictly decreasing.
+- `Mountain_Array.java` — Sample 4: minimum changes to turn an array into a mountain shape.
+- `Sample Questions.pdf` — Problem statements for the Infosys sample set.
 
-The file `Sample Questions.pdf` defines the following problems:
+## Problem Summaries
 
-1. **Gym Energy**
-   - Input: energy `E`, number of exercises `N`, and exercise drain values `A[i]`.
-   - Task: perform a minimum number of exercises so that energy `E` becomes `<= 0`.
-   - Constraint: each exercise can be used at most twice.
-   - Output: minimum exercise count or `-1` if impossible.
-   - Topic: greedy selection, sorting, simulation.
+### Graph.java
+- Performs DFS traversal on a graph represented by an adjacency list.
+- Input: number of vertices, number of edges, and each undirected edge pair.
+- Output: DFS visit order covering all connected components.
 
-2. **Heroes vs Villains**
-   - Input: number of villains `N`, number of heroes `M`, hero health `H`, and villain health values `V[i]`.
-   - Task: remove the smallest number of villains from the front such that the remaining villains can be defeated by `M` heroes with health `H`.
-   - Key behavior: a hero loses health equal to defeated villain health; equal health means both are defeated.
-   - Output: minimum villains removed.
-   - Topic: binary search, simulation, greedy strategy.
+### CP_Flip_Bits.java
+- Determines whether string `a` can be transformed into string `b` by inverting prefixes that contain equal numbers of `0` and `1`.
+- Input: multiple test cases, string length, string `a`, string `b`.
+- Output: `YES` or `NO` for each test case.
 
-3. **Road Construction**
-   - Input: terrain heights `L[i]` for `N` segments.
-   - Task: reduce selected segments across days so the resulting sequence is strictly decreasing.
-   - Digging rule: on day `D`, any scheduled segment can be reduced by `2^(D-1)` meters.
-   - Output: minimum number of days required.
-   - Topic: binary search on answer, monotonic feasibility, bit-based reductions.
+### CP_Vanya_Lanterns.java
+- Finds the minimum radius needed to cover a road segment using lantern positions.
+- Input: lantern count, road length, and lantern positions.
+- Output: minimum radius.
 
-4. **Mountain Array Transformation**
-   - Input: array `A` of length `N`.
-   - Task: change the fewest elements so that the array becomes a mountain shape:
-     - both ends equal,
-     - values increase by exactly 1 toward the center from both sides,
-     - a center peak exists.
-   - Output: minimum number of changes.
-   - Topic: array symmetry, pattern matching, minimum edit cost.
+### Grid_Shape.java
+- Solves a grid geometry problem by analyzing grid shape properties.
+- Input and output vary based on the problem specifics.
 
-5. **Interesting String Pieces**
-   - Input: string `S`.
-   - Task: reorder characters globally and cut `S` into the maximum number of equal contiguous pieces.
-   - Key insight: the maximum number of pieces is limited by character frequency divisibility.
-   - Output: maximum piece count.
-   - Topic: string frequency, greatest common divisor, combinatorics.
+### Number_Pattern.java
+- Prints a numeric pattern based on input size.
+- Input: pattern size.
+- Output: formatted numeric pattern.
 
-6. **One Swap Lexicographically Smallest**
-   - Input: array `A` and distance limit `K`.
-   - Task: perform at most one swap between elements whose indices differ by at most `K`.
-   - Goal: minimize the resulting array lexicographically.
-   - Output: resulting array after the best one swap.
-   - Topic: lexicographic optimization, sliding window minimum, greedy swap.
+### People_Capacity.java
+- Solves a capacity or constraints-based allocation problem.
+- Input and output vary depending on the problem details.
 
-7. **Restaurant Dish Sequence**
-   - Input: `N` dishes with types described by `Arr[i]`.
-   - Task: select a sequence of orders using distinct dish types, where each order contains twice as many dishes as the previous order.
-   - Constraint: each dish type can be used only once.
-   - Output: maximum total dishes eaten.
-   - Topic: frequency counts, greedy selection, doubling sequence.
+### Sum_of_Queries.java
+- Processes queries on an array to compute aggregated sums.
+- Input: array size, array values, and query operations.
+- Output: query results.
 
-## Repository Status
+### Min_total_travel_cost.java
+- Assigns `2N` employees to City A and City B to minimize total travel cost.
+- Input: integer `N`, `2N` values for `A`, and `2N` values for `B`.
+- Output: minimum total cost.
 
-- The PDF contains 7 sample problems.
-- Java implementations currently cover the first 4 problems.
-- Additional implementations for the remaining problems can be added here.
+### Discount.java
+- Intended to solve a coupon discount problem.
+- Current file is a placeholder and does not contain implementation.
 
-## Run Instructions
+### maximum_weight_possible_frequency_balanced_windows.java
+- Finds the maximum total weight of a contiguous subarray where one category is strictly dominant.
+- Input: stream length, category values, and weights.
+- Output: maximum total weight of a valid window.
 
-Compile any Java file with:
+### maximum_possible_sum_mode_frequencies_all_K_groups.java
+- Splits values into `K` groups to maximize the sum of group mode frequencies.
+- Input: array size, group count, and array values.
+- Output: maximum possible mode frequency sum.
+
+### Friends_Restaurant.java
+- Selects disjoint friend groups to maximize the number of valid restaurant orders.
+- Input: test cases, number of friends, friend budgets and planned spends.
+- Output: maximum number of valid order groups.
+
+### one_remove_max_return.java
+- Removes exactly one specified digit from a number string to maximize the resulting value.
+- Input: number string and a digit to remove.
+- Output: the lexicographically largest resulting string.
+
+### Gym_Energy.java
+- Sample 1: With energy `E` and exercise costs `A[i]`, determine the minimum number of exercises required to reduce energy to `<= 0` using each exercise at most twice.
+- Input: `E`, `N`, then `N` exercise drain values.
+- Output: minimum number of exercises or `-1`.
+
+### Heroes_Villains.java
+- Sample 2: Given `M` heroes with health `H` and `N` villains with health `V[i]`, remove the fewest villains from the front so heroes can defeat the rest.
+- Input: `N`, `M`, `H`, then `N` villain health values.
+- Output: minimum villains removed.
+
+### Road_Construction.java
+- Sample 3: Transform the terrain heights into a strictly downward slope by digging selected segments over days.
+- On day `D`, scheduled segments can be reduced by `2^(D-1)` meters.
+- Input: `N` and `N` heights.
+- Output: minimum days.
+
+### Mountain_Array.java
+- Sample 4: Change the least number of elements so the array becomes a mountain.
+- Requirements: both ends equal, values rise by exactly 1 toward the center, and a central peak or plateau exists.
+- Input: `N` and `N` array values.
+- Output: minimum number of changes.
+
+## Infosys Sample Question Coverage
+The attached `Sample Questions.pdf` contains 7 sample problems from the Infosys challenge. The repository currently implements the first 4 of those problems.
+
+## How to Build and Run
+Compile any Java file using:
 
 ```bash
 javac <FileName>.java
 ```
 
-Run the compiled program with:
+Run the compiled class using:
 
 ```bash
 java <ClassName>
@@ -87,6 +132,9 @@ java <ClassName>
 Example:
 
 ```bash
-javac Gym_Energy.java
-java Gym_Energy
+javac Mountain_Array.java
+java Mountain_Array
 ```
+
+## Repository Cleanup
+This repository now keeps only one unified `README.md` file and removes all secondary README fragments so the documentation is centralized.
