@@ -106,3 +106,26 @@ For other files, replace `Graph.java` with the desired filename:
 javac CP_Flip_Bits.java
 java CP_Flip_Bits
 ```
+
+## Solution: Friends and the Restaurant
+
+- File: `Friends_Restaurant.java`
+- Problem: maximize the number of non-intersecting groups of at least two friends such that each group's total budget is at least the group's total planned spend.
+- Approach: compute difference `y_i - x_i` for each friend, sort differences, then greedily pair the smallest and largest remaining differences to form valid groups.
+
+### Problem Description
+
+A group of `n` friends wants to visit a restaurant across several days. Each friend `i` plans to spend `x_i` burles and has `y_i` burles available. Each day, a group of at least two friends visits the restaurant, and friends cannot appear in more than one group. A group is valid only if the sum of budgets in the group is at least the sum of planned spending in the group. The goal is to maximize the number of such groups.
+
+### Input Format
+
+- `t`: number of test cases
+- for each test case:
+  - `n`: number of friends
+  - line of `n` integers `x_1 x_2 ... x_n`
+  - line of `n` integers `y_1 y_2 ... y_n`
+
+### Output
+
+- For each test case, print the maximum number of days the friends can visit the restaurant.
+- Print `0` if no valid group of at least two friends can be formed.
