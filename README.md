@@ -13,7 +13,7 @@ This repository contains Java programs solving common competitive programming an
 - `Number_Pattern.java` — Number pattern generation or analysis.
 - `People_Capacity.java` — People capacity or constraint-based solution.
 - `Sum_of_Queries.java` — Query sum processing logic.
-- `Min_total_travel_cost.java` — Calculate minimum total travel cost for the given problem constraints.
+- `Min_total_travel_cost.java` — Assign 2N employees to two cities to minimize total travel cost using a special City B cost formula.
 - `maximum_weight_possible_frequency_balanced_windows.java` — Find the maximum total weight of subarrays where some value occurs more than half the time.
 - `maximum_possible_sum_mode_frequencies_all_K_groups.java` — Compute the maximum total mode frequencies sum when splitting into K groups.
 
@@ -123,12 +123,51 @@ A group of `n` friends wants to visit a restaurant across several days. Each fri
 ## Solution: Minimum Total Travel Cost
 
 - File: `Min_total_travel_cost.java`
-- Problem: compute the minimum total travel cost under the given constraints.
-- Approach: parse the input values and calculate travel cost based on the problem-specific logic in the Java solution.
+- Problem: assign exactly `N` of `2N` employees to City A and the remaining `N` employees to City B so that the total travel cost is minimized.
+- Approach: compute each employee's City A cost as `A[i]`, City B cost as `min(A[i], B[i]) + B[i]`, then sort employees by `A[i] - BCost[i]` and assign the `N` cheapest-to-assign employees to City A and the rest to City B.
 
 ### Problem Description
 
-Given travel cost parameters and a set of conditions, determine the minimum total cost for a travel arrangement or schedule.
+There are `2N` employees and two cities, City A and City B. Exactly `N` employees must be assigned to each city.
+
+For every employee `i`:
+- Cost to City A is `A[i]`.
+- Cost to City B is `min(A[i], B[i]) + B[i]`, where `B[i]` is the travel cost from the transit hub to City B.
+
+Your task is to choose assignments so that the total travel cost is minimized.
+
+### Input Format
+
+- The first line contains integer `N`.
+- The second line contains `2N` space-separated integers `A[0] ... A[2N-1]`.
+- The third line contains `2N` space-separated integers `B[0] ... B[2N-1]`.
+
+### Output
+
+- Print a single integer representing the minimum total travel cost.
+
+### Constraints
+
+- `1 ≤ N ≤ 10^5`
+- `1 ≤ A[i], B[i] ≤ 10^5`
+
+### Example
+
+Input:
+```
+2
+10 30 50 20
+20 10 40 30
+```
+
+Output:
+```
+120
+```
+
+Explanation:
+- City B cost for each employee is `min(A[i], B[i]) + B[i]`.
+- Assign employees 3 and 4 to City A, and employees 1 and 2 to City B for minimum total cost.
 
 ### Input Format
 
