@@ -13,6 +13,7 @@ This repository contains Java programs solving common competitive programming an
 - `Number_Pattern.java` — Number pattern generation or analysis.
 - `People_Capacity.java` — People capacity or constraint-based solution.
 - `Sum_of_Queries.java` — Query sum processing logic.
+- `Min_total_travel_cost.java` — Calculate minimum total travel cost for the given problem constraints.
 - `maximum_weight_possible_frequency_balanced_windows.java` — Find the maximum total weight of subarrays where some value occurs more than half the time.
 - `maximum_possible_sum_mode_frequencies_all_K_groups.java` — Compute the maximum total mode frequencies sum when splitting into K groups.
 
@@ -118,6 +119,16 @@ java CP_Flip_Bits
 ### Problem Description
 
 A group of `n` friends wants to visit a restaurant across several days. Each friend `i` plans to spend `x_i` burles and has `y_i` burles available. Each day, a group of at least two friends visits the restaurant, and friends cannot appear in more than one group. A group is valid only if the sum of budgets in the group is at least the sum of planned spending in the group. The goal is to maximize the number of such groups.
+
+## Solution: Minimum Total Travel Cost
+
+- File: `Min_total_travel_cost.java`
+- Problem: compute the minimum total travel cost under the given constraints.
+- Approach: parse the input values and calculate travel cost based on the problem-specific logic in the Java solution.
+
+### Problem Description
+
+Given travel cost parameters and a set of conditions, determine the minimum total cost for a travel arrangement or schedule.
 
 ### Input Format
 
