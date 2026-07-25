@@ -18,6 +18,7 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - `maximum_weight_possible_frequency_balanced_windows.java` — Maximum total weight for a frequency-dominant subarray.
 - `maximum_possible_sum_mode_frequencies_all_K_groups.java` — Maximum total mode frequency sum across K groups.
 - `Friends_Restaurant.java` — Maximize restaurant orders under type and doubling constraints.
+- `Summer_sell_off.java` — Select the best days to double the profit and maximize total gain.
 - `one_remove_max_return.java` — Remove one occurrence of a digit to maximize the remaining number.
 
 ### Infosys Hack With Infy Sample Problems
