@@ -14,6 +14,7 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - `People_Capacity.java` — Capacity or constraint-based selection problem.
 - `Sum_of_Queries.java` — Query sum processing problem.
 - `Min_total_travel_cost.java` — Assign 2N employees to two cities and minimize travel cost.
+- `First_Missing_Positive.java` — Finds the smallest missing positive integer in O(n) time and O(1) extra space.
 - `Discount.java` — Coupon discount problem placeholder.
 - `maximum_weight_possible_frequency_balanced_windows.java` — Maximum total weight for a frequency-dominant subarray.
 - `maximum_possible_sum_mode_frequencies_all_K_groups.java` — Maximum total mode frequency sum across K groups.
@@ -67,6 +68,12 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - Assigns `2N` employees to City A and City B to minimize total travel cost.
 - Input: integer `N`, `2N` values for `A`, and `2N` values for `B`.
 - Output: minimum total cost.
+
+### First_Missing_Positive.java
+- Solves the classic first missing positive problem by placing each value in its correct index when possible.
+- Input: an unsorted integer array.
+- Output: the smallest positive integer missing from the array.
+- Approach: uses in-place rearrangement to achieve O(n) time and O(1) extra space.
 
 ### Discount.java
 - Intended to solve a coupon discount problem.
