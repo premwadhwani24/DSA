@@ -22,6 +22,7 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - `Summer_sell_off.java` — Select the best days to double the profit and maximize total gain.
 - `one_remove_max_return.java` — Remove one occurrence of a digit to maximize the remaining number.
 - `Beauty_Every_Subarray.java` — Compute the beauty value for every subarray of size k using a sliding window and frequency counting.
+- `Count_Possible_Messages.java` — Count the number of possible text messages represented by a pressed-key string using dynamic programming.
 
 ### Infosys Hack With Infy Sample Problems
 - `Gym_Energy.java` — Sample 1: gym energy exhaustion using each exercise at most twice.
@@ -105,6 +106,12 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - Input: integer array, window size `k`, and threshold `x`.
 - Output: an array of beauty values for all sliding windows.
 - Approach: maintains a frequency array while sliding the window to achieve efficient processing.
+
+### Count_Possible_Messages.java
+- Counts the total number of text messages that can produce a given pressed-key sequence.
+- Input: a string of digits from `2` to `9`.
+- Output: the number of possible messages modulo $10^9 + 7$.
+- Approach: uses dynamic programming over runs of equal digits and multiplies the counts for each run.
 
 ### Gym_Energy.java
 - Sample 1: With energy `E` and exercise costs `A[i]`, determine the minimum number of exercises required to reduce energy to `<= 0` using each exercise at most twice.
