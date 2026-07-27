@@ -23,6 +23,7 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - `one_remove_max_return.java` — Remove one occurrence of a digit to maximize the remaining number.
 - `Beauty_Every_Subarray.java` — Compute the beauty value for every subarray of size k using a sliding window and frequency counting.
 - `Count_Possible_Messages.java` — Count the number of possible text messages represented by a pressed-key string using dynamic programming.
+- `Maximum_Sum_Mode_Frequencies.java` — Divide the array into K contiguous groups to maximize the sum of each group’s mode frequency.
 
 ### Infosys Hack With Infy Sample Problems
 - `Gym_Energy.java` — Sample 1: gym energy exhaustion using each exercise at most twice.
@@ -112,6 +113,12 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - Input: a string of digits from `2` to `9`.
 - Output: the number of possible messages modulo $10^9 + 7$.
 - Approach: uses dynamic programming over runs of equal digits and multiplies the counts for each run.
+
+### Maximum_Sum_Mode_Frequencies.java
+- Partitions an array into exactly `K` non-empty contiguous groups to maximize the sum of each group’s mode frequency.
+- Input: array size `N`, group count `K`, and `N` integers.
+- Output: the maximum possible total score.
+- Approach: uses dynamic programming with prefix-based frequency scoring for each subarray.
 
 ### Gym_Energy.java
 - Sample 1: With energy `E` and exercise costs `A[i]`, determine the minimum number of exercises required to reduce energy to `<= 0` using each exercise at most twice.
