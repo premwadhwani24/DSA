@@ -33,6 +33,7 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - `Heroes_Villains.java` — Sample 2: minimum prefix of villains to remove for hero victory.
 - `Road_Construction.java` — Sample 3: minimum days to make terrain strictly decreasing.
 - `Mountain_Array.java` — Sample 4: minimum changes to turn an array into a mountain shape.
+- `Toll_Calculation.java` — Computes the minimum toll cost from city 1 to city N using at most K coupon-based free rides.
 - `Sample Questions.pdf` — Problem statements for the Infosys sample set.
 
 ## Problem Summaries
@@ -164,6 +165,12 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - Requirements: both ends equal, values rise by exactly 1 toward the center, and a central peak or plateau exists.
 - Input: `N` and `N` array values.
 - Output: minimum number of changes.
+
+### Toll_Calculation.java
+- Computes the minimum possible toll cost to travel from city `1` to city `N`.
+- You may use up to `K` coupons that make a road segment free, and each route is explored with DFS while tracking the remaining coupons.
+- Input: `N`, `M`, `K`, followed by `M` undirected road edges with toll values.
+- Output: the minimum total toll cost, or `-1` if the destination is unreachable.
 
 ## Infosys Sample Question Coverage
 The attached `Sample Questions.pdf` contains 7 sample problems from the Infosys challenge. The repository currently implements the first 4 of those problems.
