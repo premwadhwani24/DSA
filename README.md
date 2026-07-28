@@ -24,6 +24,7 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - `Beauty_Every_Subarray.java` — Compute the beauty value for every subarray of size k using a sliding window and frequency counting.
 - `Count_Possible_Messages.java` — Count the number of possible text messages represented by a pressed-key string using dynamic programming.
 - `Maximum_Sum_Mode_Frequencies.java` — Divide the array into K contiguous groups to maximize the sum of each group’s mode frequency.
+- `Min_Swaps_Array.java` — Minimum swaps needed to make all `1`s form one contiguous segment in a binary array.
 
 ### Infosys Hack With Infy Sample Problems
 - `Gym_Energy.java` — Sample 1: gym energy exhaustion using each exercise at most twice.
@@ -119,6 +120,13 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - Input: array size `N`, group count `K`, and `N` integers.
 - Output: the maximum possible total score.
 - Approach: uses dynamic programming with prefix-based frequency scoring for each subarray.
+
+### Min_Swaps_Array.java
+- Given a binary array, find the minimum number of swaps required to bring all `1`s together into one contiguous segment.
+- If the array contains no `1`, the answer is `0`.
+- Input: array size `n`, followed by `n` values that are either `0` or `1`.
+- Output: the minimum number of swaps.
+- Approach: uses a sliding window of size equal to the number of `1`s and counts how many `1`s are inside each window.
 
 ### Gym_Energy.java
 - Sample 1: With energy `E` and exercise costs `A[i]`, determine the minimum number of exercises required to reduce energy to `<= 0` using each exercise at most twice.
