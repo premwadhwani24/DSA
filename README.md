@@ -26,6 +26,7 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - `Maximum_Sum_Mode_Frequencies.java` — Divide the array into K contiguous groups to maximize the sum of each group’s mode frequency.
 - `Min_Swaps_Array.java` — Minimum swaps needed to make all `1`s form one contiguous segment in a binary array.
 - `Longest_Common_Subsequence_K_Replacements.java` — Maximum length of a common subsequence when up to K mismatched pairs may be treated as replacements.
+- `Minimum_delection.java` — Minimum deletions needed so that all remaining distinct values have unique frequencies.
 
 ### Infosys Hack With Infy Sample Problems
 - `Gym_Energy.java` — Sample 1: gym energy exhaustion using each exercise at most twice.
@@ -134,6 +135,13 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - Input: strings `S`, `T`, and integer `K`.
 - Output: the maximum possible subsequence length.
 - Approach: uses dynamic programming over the two strings and the remaining replacement budget.
+
+### Minimum_delection.java
+- Given an integer array, delete the minimum number of elements so that all remaining distinct values have different frequencies.
+- If all elements are the same, the answer is `0`.
+- Input: array size `N`, followed by `N` integers.
+- Output: the minimum number of deletions required.
+- Approach: counts frequencies, sorts them, and greedily assigns unique frequency values while avoiding duplicates.
 
 ### Gym_Energy.java
 - Sample 1: With energy `E` and exercise costs `A[i]`, determine the minimum number of exercises required to reduce energy to `<= 0` using each exercise at most twice.
