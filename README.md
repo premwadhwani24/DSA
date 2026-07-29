@@ -26,6 +26,7 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - `Maximum_Sum_Mode_Frequencies.java` — Divide the array into K contiguous groups to maximize the sum of each group’s mode frequency.
 - `Min_Swaps_Array.java` — Minimum swaps needed to make all `1`s form one contiguous segment in a binary array.
 - `Longest_Common_Subsequence_K_Replacements.java` — Maximum length of a common subsequence when up to K mismatched pairs may be treated as replacements.
+- `Longest_subarray_delete_one.java` — Find the longest contiguous subarray with at most one zero in a binary array.
 - `Minimum_delection.java` — Minimum deletions needed so that all remaining distinct values have unique frequencies.
 
 ### Infosys Hack With Infy Sample Problems
@@ -143,6 +144,12 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - Input: array size `N`, followed by `N` integers.
 - Output: the minimum number of deletions required.
 - Approach: counts frequencies, sorts them, and greedily assigns unique frequency values while avoiding duplicates.
+
+### Longest_subarray_delete_one.java
+- Given a binary array, find the longest contiguous subarray that contains at most one `0`.
+- Input: array size `N`, followed by `N` binary values.
+- Output: the maximum length of a valid subarray.
+- Approach: uses a sliding window with a zero counter to maintain the longest valid window.
 
 ### Gym_Energy.java
 - Sample 1: With energy `E` and exercise costs `A[i]`, determine the minimum number of exercises required to reduce energy to `<= 0` using each exercise at most twice.
