@@ -17,6 +17,7 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - `Min_total_travel_cost.java` — Assign 2N employees to two cities and minimize travel cost.
 - `First_Missing_Positive.java` — Finds the smallest missing positive integer in O(n) time and O(1) extra space.
 - `Discount.java` — Coupon discount problem placeholder.
+- `Variable_remaining.java` — Computes the edit distance between two strings and converts it into a remaining discount value.
 - `maximum_weight_possible_frequency_balanced_windows.java` — Maximum total weight for a frequency-dominant subarray.
 - `maximum_possible_sum_mode_frequencies_all_K_groups.java` — Maximum total mode frequency sum across K groups.
 - `Friends_Restaurant.java` — Maximize restaurant orders under type and doubling constraints.
@@ -93,6 +94,12 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 ### Discount.java
 - Intended to solve a coupon discount problem.
 - Current file is a placeholder and does not contain implementation.
+
+### Variable_remaining.java
+- Computes the minimum number of edit operations needed to transform one string into another using dynamic programming.
+- Input: two strings entered by the user.
+- Output: edit distance and the remaining discount after applying the formula $5000 - 5 \times \text{editDistance}$.
+- Approach: builds a DP table over prefixes of the two strings to evaluate insert, delete, and replace operations.
 
 ### maximum_weight_possible_frequency_balanced_windows.java
 - Finds the maximum total weight of a contiguous subarray where one category is strictly dominant.
