@@ -11,6 +11,7 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - `CP_Vanya_Lanterns.java` — Vanya and Lanterns minimum radius problem.
 - `Grid_Shape.java` — Grid shape / geometry-based problem.
 - `Number_Pattern.java` — Numeric pattern generation.
+- `Rod_Cutting.java` — Classic rod cutting dynamic programming problem to maximize profit.
 - `People_Capacity.java` — Capacity or constraint-based selection problem.
 - `Sum_of_Queries.java` — Query sum processing problem.
 - `Min_total_travel_cost.java` — Assign 2N employees to two cities and minimize travel cost.
@@ -62,6 +63,12 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - Prints a numeric pattern based on input size.
 - Input: pattern size.
 - Output: formatted numeric pattern.
+
+### Rod_Cutting.java
+- Solves the rod cutting problem using dynamic programming.
+- Input: rod length and an array of prices for each piece length.
+- Output: the maximum obtainable value from cutting the rod.
+- Approach: computes the best value for every prefix length using a DP table.
 
 ### People_Capacity.java
 - Solves a capacity or constraints-based allocation problem.
