@@ -19,6 +19,7 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - `Discount.java` — Coupon discount problem placeholder.
 - `Variable_remaining.java` — Computes the edit distance between two strings and converts it into a remaining discount value.
 - `MinimumClassesUsingBFS.java` — Finds the minimum number of classes needed by treating the input relationships as an undirected graph and using BFS over connected components.
+- `FindAdditionalIds.java` — Finds IDs present in the second list but missing from the first list.
 - `maximum_weight_possible_frequency_balanced_windows.java` — Maximum total weight for a frequency-dominant subarray.
 - `maximum_possible_sum_mode_frequencies_all_K_groups.java` — Maximum total mode frequency sum across K groups.
 - `Friends_Restaurant.java` — Maximize restaurant orders under type and doubling constraints.
@@ -107,6 +108,12 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - Input: number of students, number of relationships, and each relationship pair.
 - Output: the minimum number of classes required to separate all students so that no connected pair is in the same class.
 - Approach: explores each connected component with BFS and returns the maximum component size.
+
+### FindAdditionalIds.java
+- Compares two integer lists and returns the values that appear in the second list but not in the first.
+- Input: sizes and elements of two arrays.
+- Output: the list of additional IDs.
+- Approach: checks each element of the second list against the first list and collects the unmatched values.
 
 ### maximum_weight_possible_frequency_balanced_windows.java
 - Finds the maximum total weight of a contiguous subarray where one category is strictly dominant.
