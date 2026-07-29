@@ -18,6 +18,7 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - `First_Missing_Positive.java` — Finds the smallest missing positive integer in O(n) time and O(1) extra space.
 - `Discount.java` — Coupon discount problem placeholder.
 - `Variable_remaining.java` — Computes the edit distance between two strings and converts it into a remaining discount value.
+- `MinimumClassesUsingBFS.java` — Finds the minimum number of classes needed by treating the input relationships as an undirected graph and using BFS over connected components.
 - `maximum_weight_possible_frequency_balanced_windows.java` — Maximum total weight for a frequency-dominant subarray.
 - `maximum_possible_sum_mode_frequencies_all_K_groups.java` — Maximum total mode frequency sum across K groups.
 - `Friends_Restaurant.java` — Maximize restaurant orders under type and doubling constraints.
@@ -100,6 +101,12 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - Input: two strings entered by the user.
 - Output: edit distance and the remaining discount after applying the formula $5000 - 5 \times \text{editDistance}$.
 - Approach: builds a DP table over prefixes of the two strings to evaluate insert, delete, and replace operations.
+
+### MinimumClassesUsingBFS.java
+- Models student relationships as an undirected graph and finds the largest connected component size using BFS.
+- Input: number of students, number of relationships, and each relationship pair.
+- Output: the minimum number of classes required to separate all students so that no connected pair is in the same class.
+- Approach: explores each connected component with BFS and returns the maximum component size.
 
 ### maximum_weight_possible_frequency_balanced_windows.java
 - Finds the maximum total weight of a contiguous subarray where one category is strictly dominant.
