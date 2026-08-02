@@ -19,6 +19,7 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - `Discount.java` — Coupon discount problem placeholder.
 - `Variable_remaining.java` — Computes the edit distance between two strings and converts it into a remaining discount value.
 - `MinimumClassesUsingBFS.java` — Finds the minimum number of classes needed by treating the input relationships as an undirected graph and using BFS over connected components.
+- `DIVIDE_AND_CONQUER.java` — Computes the largest connected component size in a graph to determine how many groups or classrooms are needed.
 - `FindAdditionalIds.java` — Finds IDs present in the second list but missing from the first list.
 - `maximum_weight_possible_frequency_balanced_windows.java` — Maximum total weight for a frequency-dominant subarray.
 - `maximum_possible_sum_mode_frequencies_all_K_groups.java` — Maximum total mode frequency sum across K groups.
@@ -108,6 +109,12 @@ It includes classic contest problems, Infosys sample challenges, graph traversal
 - Input: number of students, number of relationships, and each relationship pair.
 - Output: the minimum number of classes required to separate all students so that no connected pair is in the same class.
 - Approach: explores each connected component with BFS and returns the maximum component size.
+
+### DIVIDE_AND_CONQUER.java
+- Treats the input relationships as an undirected graph and counts the size of each connected component.
+- Input: number of people, number of relationships, and the relationship pairs.
+- Output: the largest component size, which represents the maximum number of people that must stay together.
+- Approach: builds an adjacency list and uses DFS to explore each connected component.
 
 ### FindAdditionalIds.java
 - Compares two integer lists and returns the values that appear in the second list but not in the first.
